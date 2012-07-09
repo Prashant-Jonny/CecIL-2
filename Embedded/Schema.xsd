@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="document">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="styleset" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="styledef" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required" />
+									<xs:attribute name="color" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="(\#)[0-9a-fA-F]{6}" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="weight" default="Normal">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="UltraLight" />
+												<xs:enumeration value="Light" />
+												<xs:enumeration value="Normal" />
+												<xs:enumeration value="Bold" />
+												<xs:enumeration value="UltraBold" />
+												<xs:enumeration value="Heavy" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="style" default="Normal">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Normal" />
+												<xs:enumeration value="Italic" />
+												<xs:enumeration value="Oblique" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="paragraph" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="section" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="style" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

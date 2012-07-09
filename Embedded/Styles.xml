@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<styleset>
+		<styledef name="text" color="#000000" />
+		<styledef name="text.link" color="#0000FF" />
+		<styledef name="text.markup" color="#204A87" />
+		<styledef name="text.punctuation" color="#2E3436" />
+		<styledef name="text.preprocessor" color="#F57900" />
+		<styledef name="text.preprocessor.keyword" color="#CE5C00" weight="Bold" />
+
+		<styledef name="comment" color="#339900" style="Italic" />
+		<styledef name="comment.block" color="#339900" style="Italic" />
+		<styledef name="comment.keyword" color="#229000" style="Italic" weight="Bold" />
+		<styledef name="comment.tag.block" color="#339900" style="Italic" />
+
+		<styledef name="constant" color="#CC00CC" />
+		<styledef name="constant.language" color="#CC00CC" />
+		<styledef name="constant.language.void" color="#0000FF" />
+
+		<styledef name="string" color="#CC00CC" />
+		<styledef name="string.double" color="#CC00CC" />
+
+		<styledef name="keyword" color="#0000FF" />
+		<styledef name="keyword.declaration" color="#0000FF" />
+		<styledef name="keyword.jump" color="#0000FF" />
+		<styledef name="keyword.modifier" color="#0000FF" />
+		<styledef name="keyword.namespace" color="#0000FF" />
+		<styledef name="keyword.operator" color="#0000FF" />
+		<styledef name="keyword.property" color="#0000FF" />
+		<styledef name="keyword.semantic.type" color="#3399BB" />
+		<styledef name="keyword.semantic.field" color="#000000" style="Italic" />
+		<styledef name="keyword.type" color="#0000FF" />
+	</styleset>
+</document>
