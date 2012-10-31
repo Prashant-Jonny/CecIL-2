@@ -9,8 +9,10 @@ namespace CecIL
 		{
 			Application.Init( );
 			
-			MainWindow win = new MainWindow( );
-			win.Show( );
+			MainWindow oMainWindow = new MainWindow( );
+
+			oMainWindow.Show( );
+
 			Application.Run( );
 		}
 	}

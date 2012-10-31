@@ -46,7 +46,9 @@ public partial class MainWindow
 		this.vBox.Name = "vBox";
 		this.vBox.Spacing = 6;
 		// Container child vBox.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><menubar name='MenuBar'><menu name='FileAction' action='FileAction'><menuitem name='openAction' action='openAction'/><separator/><menuitem name='quitAction' action='quitAction'/></menu></menubar></ui>");
+		this.UIManager.AddUiFromString ("<ui><menubar name=\'MenuBar\'><menu name=\'FileAction\' action=\'FileAction\'><menuitem" +
+			" name=\'openAction\' action=\'openAction\'/><separator/><menuitem name=\'quitAction\' " +
+			"action=\'quitAction\'/></menu></menubar></ui>");
 		this.MenuBar = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/MenuBar")));
 		this.MenuBar.Name = "MenuBar";
 		this.vBox.Add (this.MenuBar);
@@ -55,7 +57,8 @@ public partial class MainWindow
 		w2.Expand = false;
 		w2.Fill = false;
 		// Container child vBox.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><toolbar name='ToolBar'><toolitem name='openAction' action='openAction'/><separator/><toolitem name='quitAction' action='quitAction'/></toolbar></ui>");
+		this.UIManager.AddUiFromString ("<ui><toolbar name=\'ToolBar\'><toolitem name=\'openAction\' action=\'openAction\'/><sep" +
+			"arator/><toolitem name=\'quitAction\' action=\'quitAction\'/></toolbar></ui>");
 		this.ToolBar = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/ToolBar")));
 		this.ToolBar.Name = "ToolBar";
 		this.ToolBar.ShowArrow = false;

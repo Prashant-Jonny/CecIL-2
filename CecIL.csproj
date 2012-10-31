@@ -9,6 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CecIL</RootNamespace>
     <AssemblyName>CecIL</AssemblyName>
+    <StartupObject>CecIL.MainClass</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>True</DebugSymbols>
@@ -39,12 +40,10 @@
     <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="Mono.Cecil, Version=0.9.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <Private>False</Private>
-      <Package>monodevelop</Package>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System.Xml" />
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\..\..\Program Files\MonoDevelop\bin\Mono.Cecil.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -55,23 +54,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="CecIL.cs" />
-    <Compile Include="PropertyList.cs" />
-    <Compile Include="Reference.cs" />
-    <Compile Include="IName.cs" />
     <Compile Include="Util.cs" />
-    <Compile Include="Assembly.cs" />
-    <Compile Include="IRender.cs" />
-    <Compile Include="TextTagTableEx.cs" />
-    <Compile Include="TextBufferEx.cs" />
+    <Compile Include="ModelSource\Assembly.cs" />
+    <Compile Include="ModelSource\AssemblyList.cs" />
+    <Compile Include="ModelSource\IName.cs" />
+    <Compile Include="ModelSource\IRender.cs" />
+    <Compile Include="ViewSource\MainWindow.cs" />
+    <Compile Include="_CecIL.cs" />
+    <Compile Include="_PropertyList.cs" />
+    <Compile Include="ModelSource\Reference.cs" />
+    <Compile Include="Extensions\TextBufferEx.cs" />
+    <Compile Include="Extensions\TextTagTableEx.cs" />
+    <Compile Include="ModelSource\INode.cs" />
+    <Compile Include="ModelSource\ReferenceList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Embedded\" />
+    <Folder Include="ModelSource\" />
+    <Folder Include="ViewSource\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
