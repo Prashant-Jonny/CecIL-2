@@ -3,14 +3,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5980DB2A-9A92-4AD4-9DDC-E110C3C33492}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CecIL</RootNamespace>
     <AssemblyName>CecIL</AssemblyName>
-    <StartupObject>CecIL.MainClass</StartupObject>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>True</DebugSymbols>
@@ -64,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
@@ -80,6 +78,7 @@
     <Compile Include="Extensions\TextTagTableEx.cs" />
     <Compile Include="ModelSource\INode.cs" />
     <Compile Include="ModelSource\ReferenceList.cs" />
+    <Compile Include="gtk-gui\MainWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
